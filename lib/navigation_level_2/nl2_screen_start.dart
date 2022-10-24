@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/navigation_level_1/nl1_screen_start.dart';
 
@@ -48,7 +50,13 @@ class _NL2ScreenDefaultState extends State<NL2ScreenDefault> with RouteAware {
   @override
   void didPopNext() {
     print("pop next triggered");
-    super.didPop();
+    super.didPopNext();
+  }
+
+  @override
+  void didPushNext() {
+    print('push next from init');
+    super.didPushNext();
   }
 
   @override

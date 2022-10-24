@@ -35,13 +35,19 @@ class _NL2ScreenAState extends State<NL2ScreenA> with RouteAware {
   @override
   void didPopNext() {
     print('pop next screen A');
-    super.didPop();
+    super.didPopNext();
   }
 
   @override
   void didPush() {
     print('push from screen A');
     super.didPush();
+  }
+
+  @override
+  void didPushNext() {
+    print('push from screen A');
+    super.didPushNext();
   }
 
   @override
