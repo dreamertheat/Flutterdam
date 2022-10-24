@@ -7,8 +7,8 @@ Features:
     - Navigation
     - Bloc
     - FlutterGen
-    - Localdatabase
-    - 
+    - Local database
+    - Http
 
 To use:
     - Every folder is a feature which contains feature_start.dart (example: nl1_screen_start.dart)
