@@ -1,16 +1,68 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/navigation_level_1/nl1_screen_start.dart';
+
+import 'nl2_screen_a.dart';
 
 class NL2ScreenStart extends StatelessWidget {
-  const NL2ScreenStart({super.key});
-
+  NL2ScreenStart({super.key});
+  static const routeName = '/nl2';
+  final RouteObserver<ModalRoute> routeObserver = RouteObserver<ModalRoute>();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SafeArea(
+      navigatorObservers: [routeObserver],
+      routes: {NL2ScreenA.routeName: (context) => const NL2ScreenA()},
+      home: const NL2ScreenDefault(),
+    );
+  }
+}
+
+class NL2ScreenDefault extends StatefulWidget {
+  const NL2ScreenDefault({super.key});
+
+  @override
+  State<NL2ScreenDefault> createState() => _NL2ScreenDefaultState();
+}
+
+class _NL2ScreenDefaultState extends State<NL2ScreenDefault> with RouteAware {
+  @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      routeObserver.subscribe(this, ModalRoute.of(context) as PageRoute);
+    });
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    routeObserver.unsubscribe(this);
+    super.dispose();
+  }
+
+  @override
+  void didPop() {
+    print("pop triggered");
+    super.didPop();
+  }
+
+  @override
+  void didPopNext() {
+    print("pop next triggered");
+    super.didPop();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
           child: Container(
-        padding: const EdgeInsets.all(10),
-        child: const Text("navigation level 2"),
-      )),
+              padding: const EdgeInsets.all(10),
+              child: TextButton(
+                child: const Text("Go to next screen"),
+                onPressed: () {
+                  Navigator.of(context).pushNamed(NL2ScreenA.routeName);
+                },
+              ))),
     );
   }
 }
