@@ -54,6 +54,12 @@ class _NL2ScreenDefaultState extends State<NL2ScreenDefault> with RouteAware {
   }
 
   @override
+  void didPush() {
+    print('push from init');
+    super.didPush();
+  }
+
+  @override
   void didPushNext() {
     print('push next from init');
     super.didPushNext();
