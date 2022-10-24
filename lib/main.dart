@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/meals_app/meals_app.dart';
-import 'package:flutter_complete_guide/shop_app/shop_app.dart';
-import 'package:flutter_complete_guide/navigation_level_1/screen_default.dart';
+import 'package:flutter_complete_guide/navigation_level_2/nl2_screen_start.dart';
 
 void main() {
   runApp(const MyHomePage());
@@ -12,6 +10,6 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ScreenDefault();
+    return const NL2ScreenStart()
   }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/navigation_level_1/screen_b.dart';
+import 'package:flutter_complete_guide/navigation_level_1/nl1_screen_b.dart';
 
-class ScreenA extends StatelessWidget {
-  const ScreenA({super.key});
+class NL1ScreenA extends StatelessWidget {
+  const NL1ScreenA({super.key});
   static const routeName = '/screenA';
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class ScreenA extends StatelessWidget {
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context)
-                    .pushReplacementNamed(ScreenB.routeName, arguments: 1);
+                    .pushReplacementNamed(NL1ScreenB.routeName, arguments: 1);
               },
               child: const Text("go to screen B")),
           ElevatedButton(

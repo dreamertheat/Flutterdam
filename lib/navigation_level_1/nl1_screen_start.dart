@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/navigation_level_1/screen_a.dart';
+import 'package:flutter_complete_guide/navigation_level_1/nl1_screen_a.dart';
 
-import 'screen_b.dart';
+import 'nl1_screen_b.dart';
 
-class ScreenDefault extends StatefulWidget {
-  const ScreenDefault({super.key});
+class NL1ScreenStart extends StatefulWidget {
+  const NL1ScreenStart({super.key});
   static const routeName = '/screenb';
 
   @override
-  State<ScreenDefault> createState() => _ScreenDefaultState();
+  State<NL1ScreenStart> createState() => _NL1ScreenStartState();
 }
 
 final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 
-class _ScreenDefaultState extends State<ScreenDefault> {
+class _NL1ScreenStartState extends State<NL1ScreenStart> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorObservers: [routeObserver],
       routes: {
-        ScreenA.routeName: (context) => const ScreenA(),
-        ScreenB.routeName: (context) => const ScreenB(),
+        NL1ScreenA.routeName: (context) => const NL1ScreenA(),
+        NL1ScreenB.routeName: (context) => const NL1ScreenB(),
       },
       home: const DefaultContext(),
     );
@@ -40,7 +40,7 @@ class DefaultContext extends StatelessWidget {
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context)
-                    .pushNamed(ScreenA.routeName, arguments: 3);
+                    .pushNamed(NL1ScreenA.routeName, arguments: 3);
               },
               child: const Text("go to screen A"))
         ]),
