@@ -49,7 +49,7 @@ class _NL2ScreenDefaultState extends State<NL2ScreenDefault> with RouteAware {
 
   @override
   void didPopNext() {
-    print("pop next triggered");
+    print("init is now visible after popping");
     super.didPopNext();
   }
 
