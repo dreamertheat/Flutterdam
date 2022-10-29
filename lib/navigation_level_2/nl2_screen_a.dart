@@ -1,5 +1,8 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/navigation_level_1/nl1_screen_start.dart';
+import 'package:flutter_complete_guide/navigation_level_2/nl2_screen_b.dart';
 
 class NL2ScreenA extends StatefulWidget {
   const NL2ScreenA({super.key});
@@ -28,25 +31,25 @@ class _NL2ScreenAState extends State<NL2ScreenA> with RouteAware {
 
   @override
   void didPop() {
-    print('pop screen A');
+    print('didPop screen A');
     super.didPop();
   }
 
   @override
   void didPopNext() {
-    print('pop next screen A');
+    print('didPopNext screen A');
     super.didPopNext();
   }
 
   @override
   void didPush() {
-    print('push from screen A');
+    print('didPush screen A');
     super.didPush();
   }
 
   @override
   void didPushNext() {
-    print('push from screen A');
+    print('didPushNext screen A');
     super.didPushNext();
   }
 
@@ -56,11 +59,22 @@ class _NL2ScreenAState extends State<NL2ScreenA> with RouteAware {
       body: SafeArea(
           child: Container(
         padding: const EdgeInsets.all(10),
-        child: TextButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          child: const Text("GO BACK"),
+        child: Column(
+          children: [
+            const Text("THIS IS SCREEN A"),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).popAndPushNamed("/");
+              },
+              child: const Text("GO BACK"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(NL2ScreenB.routeName);
+              },
+              child: const Text("GO TO B"),
+            ),
+          ],
         ),
       )),
     );

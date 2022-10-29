@@ -4,16 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/navigation_level_1/nl1_screen_start.dart';
 
 import 'nl2_screen_a.dart';
+import 'nl2_screen_b.dart';
 
 class NL2ScreenStart extends StatelessWidget {
   NL2ScreenStart({super.key});
   static const routeName = '/nl2';
-  final RouteObserver<ModalRoute> routeObserver = RouteObserver<ModalRoute>();
+  final RouteObserver<PageRoute> routeObserver = RouteObserver();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorObservers: [routeObserver],
-      routes: {NL2ScreenA.routeName: (context) => const NL2ScreenA()},
+      routes: {
+        NL2ScreenA.routeName: (context) => const NL2ScreenA(),
+        NL2ScreenB.routeName: (context) => const NL2ScreenB(),
+      },
       home: const NL2ScreenDefault(),
     );
   }
@@ -43,25 +47,25 @@ class _NL2ScreenDefaultState extends State<NL2ScreenDefault> with RouteAware {
 
   @override
   void didPop() {
-    print("pop triggered");
+    print("screen start didpop");
     super.didPop();
   }
 
   @override
   void didPopNext() {
-    print("init is now visible after popping");
+    print("screen start didPopNext");
     super.didPopNext();
   }
 
   @override
   void didPush() {
-    print('push from init');
+    print('screen start didPush'); //init screen
     super.didPush();
   }
 
   @override
   void didPushNext() {
-    print('push next from init');
+    print('screen start didPushNext');
     super.didPushNext();
   }
 
@@ -71,12 +75,22 @@ class _NL2ScreenDefaultState extends State<NL2ScreenDefault> with RouteAware {
       body: SafeArea(
           child: Container(
               padding: const EdgeInsets.all(10),
-              child: TextButton(
-                child: const Text("Go to next screen"),
-                onPressed: () {
-                  Navigator.of(context).pushNamed(NL2ScreenA.routeName);
-                },
-              ))),
+              child: Column(children: [
+                const Text("THIS IS INIT SCREEN"),
+                const Padding(padding: EdgeInsets.all(10)),
+                TextButton(
+                  child: const Text("Go to screen A"),
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(NL2ScreenA.routeName);
+                  },
+                ),
+                TextButton(
+                  child: const Text("Go to screen B"),
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(NL2ScreenB.routeName);
+                  },
+                ),
+              ]))),
     );
   }
 }

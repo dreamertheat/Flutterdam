@@ -6,19 +6,19 @@
 	<dict>
 		<key>Resources/AppIcon.icns</key>
 		<data>
-		kun5K3EHt2qNiMa/0wFyDA8OK6w=
+		URS7ZMjS6R2b/EKu5Z1xZIypGck=
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		L//Mk2uVN5HqG3WlyvR35pdJwR4=
+		N1z6Xtccg3lo4aAr3TcER1K83wc=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib/keyedobjects-101300.nib</key>
 		<data>
-		Zmt7ENUhYZf6v/oVbzWYy8uCl/0=
+		Hja5i6XaZhTszAJ9n3voW8LneOI=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib/keyedobjects.nib</key>
 		<data>
-		WYWhXXHqroEW4q+oXsRmSKzcTi0=
+		Zf8nXLW6Lpz8KzUEVd57eJxAgM0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -27,10 +27,10 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			hEWWA0VXtpDXmbA6w/FILdeZY3U=
+			eifWW4F883Q8y1eKFwPCZAEaLZc=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"844596034557b690d799b03ac3f1482dd7996375"</string>
+			<string>cdhash H"7a27d65b817cf3743ccb578a1703c264011a2d97"</string>
 		</dict>
 		<key>Frameworks/FlutterMacOS.framework</key>
 		<dict>
@@ -198,28 +198,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XSLV5aDAk2ZNP+iDiB+JrUgSsTVPRKKYb6VH+lq6zIk=
+			mnw/86rBhdpr28A9GFSr/xwLnYgcKRhSPRhn0wpyVWQ=
 			</data>
 		</dict>
 		<key>Resources/Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TdyYtPSFk8viwMqrx/YMSis9NuFhgYKbZSceSUsRB+M=
+			LVuhHY28+42wUbDlr5tlfZMqh6M8QoyDoxIVc3NaH1U=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/MainMenu.nib/keyedobjects-101300.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			e0EBFF+F6cc5cQ/AqSpPPJ6dyxULpH4hfaECwbNEO+4=
+			wKXc9rTspB+WwjfNGkqXtlvGc+KCpvu7F9y7e+bzrCQ=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/MainMenu.nib/keyedobjects.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BCmjndAimgZyjCEuxheuxHm2pS5aD+RLDxztdcU9r6w=
+			UjiEqXxDoYtwxgYpCcDaDxe9WZvLkQxk9y/TX5cVjPk=
 			</data>
 		</dict>
 	</dict>

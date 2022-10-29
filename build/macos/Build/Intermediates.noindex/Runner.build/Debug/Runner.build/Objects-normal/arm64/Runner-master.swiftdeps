@@ -1,8 +1,8 @@
-version: "Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)"
-options: "9a1a92567da5ba281853eeb8aa848932366c22d4c906cd6a3183548b7eafb970"
-build_start_time: [1665561669, 575193881]
-build_end_time: [1665561672, 727895975]
+version: "Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)"
+options: "4d1c56bc86c3af0cb7ddab8b8c26f2f5148ebaaf142b8a641b091a4164a5195d"
+build_start_time: [1667024956, 541800022]
+build_end_time: [1667024963, 20522117]
 inputs:
-  "/Users/admin/Documents/work/flutter/flutter-intro-bootcamp-outputs/macos/Flutter/GeneratedPluginRegistrant.swift": [1665561657, 282510042]
-  "/Users/admin/Documents/work/flutter/flutter-intro-bootcamp-outputs/macos/Runner/AppDelegate.swift": [1665079925, 468585014]
-  "/Users/admin/Documents/work/flutter/flutter-intro-bootcamp-outputs/macos/Runner/MainFlutterWindow.swift": [1665079925, 470362186]
+  "/Users/admin/Documents/work/flutterdam/macos/Flutter/GeneratedPluginRegistrant.swift": [1667024943, 192397356]
+  "/Users/admin/Documents/work/flutterdam/macos/Runner/AppDelegate.swift": [1665079925, 468585014]
+  "/Users/admin/Documents/work/flutterdam/macos/Runner/MainFlutterWindow.swift": [1665079925, 470362186]
