@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/navigation_level_1/nl1_screen_a.dart';
+import 'package:flutter_complete_guide/navigation/navigation_level_1/nl1_screen_a.dart';
 
 import 'nl1_screen_b.dart';
 

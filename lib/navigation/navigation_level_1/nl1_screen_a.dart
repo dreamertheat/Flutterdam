@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/navigation_level_1/nl1_screen_b.dart';
+import 'package:flutter_complete_guide/navigation/navigation_level_1/nl1_screen_b.dart';
 
 class NL1ScreenA extends StatelessWidget {
   const NL1ScreenA({super.key});

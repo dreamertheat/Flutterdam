@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/navigation_level_1/nl1_screen_start.dart';
+import 'package:flutter_complete_guide/navigation/navigation_level_1/nl1_screen_start.dart';
 
 import 'nl2_screen_a.dart';
 import 'nl2_screen_b.dart';
@@ -9,7 +9,7 @@ import 'nl2_screen_b.dart';
 class NL2ScreenStart extends StatelessWidget {
   NL2ScreenStart({super.key});
   static const routeName = '/nl2';
-  final RouteObserver<PageRoute> routeObserver = RouteObserver();
+  final RouteObserver<ModalRoute> routeObserver = RouteObserver();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +18,7 @@ class NL2ScreenStart extends StatelessWidget {
         NL2ScreenA.routeName: (context) => const NL2ScreenA(),
         NL2ScreenB.routeName: (context) => const NL2ScreenB(),
       },
-      home: const NL2ScreenDefault(),
+      home: const NL2ScreenA(),
     );
   }
 }
@@ -81,13 +81,17 @@ class _NL2ScreenDefaultState extends State<NL2ScreenDefault> with RouteAware {
                 TextButton(
                   child: const Text("Go to screen A"),
                   onPressed: () {
-                    Navigator.of(context).pushNamed(NL2ScreenA.routeName);
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const NL2ScreenA(),
+                    ));
                   },
                 ),
                 TextButton(
                   child: const Text("Go to screen B"),
                   onPressed: () {
-                    Navigator.of(context).pushNamed(NL2ScreenB.routeName);
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const NL2ScreenB(),
+                    ));
                   },
                 ),
               ]))),

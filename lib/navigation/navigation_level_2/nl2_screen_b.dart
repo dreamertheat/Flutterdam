@@ -1,19 +1,20 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/navigation_level_1/nl1_screen_start.dart';
-import 'package:flutter_complete_guide/navigation_level_2/nl2_screen_b.dart';
+import 'package:flutter_complete_guide/navigation/navigation_level_1/nl1_screen_start.dart';
 
-class NL2ScreenA extends StatefulWidget {
-  const NL2ScreenA({super.key});
+import 'nl2_screen_a.dart';
 
-  static const routeName = 'NL2ScreenA';
+class NL2ScreenB extends StatefulWidget {
+  const NL2ScreenB({super.key});
+
+  static const routeName = 'NL2ScreenB';
 
   @override
-  State<NL2ScreenA> createState() => _NL2ScreenAState();
+  State<NL2ScreenB> createState() => _NL2ScreenBState();
 }
 
-class _NL2ScreenAState extends State<NL2ScreenA> with RouteAware {
+class _NL2ScreenBState extends State<NL2ScreenB> with RouteAware {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
@@ -31,48 +32,53 @@ class _NL2ScreenAState extends State<NL2ScreenA> with RouteAware {
 
   @override
   void didPop() {
-    print('didPop screen A');
+    print('didPop screen B');
     super.didPop();
   }
 
   @override
   void didPopNext() {
-    print('didPopNext screen A');
+    print('didPopNext screen B');
     super.didPopNext();
   }
 
   @override
   void didPush() {
-    print('didPush screen A');
+    print('didPush screen B');
     super.didPush();
   }
 
   @override
   void didPushNext() {
-    print('didPushNext screen A');
+    print('didPushNext screen B');
     super.didPushNext();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Page B'),
+      ),
       body: SafeArea(
           child: Container(
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            const Text("THIS IS SCREEN A"),
+            const Text("THIS IS SCREEN B"),
             TextButton(
               onPressed: () {
-                Navigator.of(context).popAndPushNamed("/");
+                Navigator.of(context).pop();
               },
               child: const Text("GO BACK"),
             ),
             TextButton(
               onPressed: () {
-                Navigator.of(context).pushNamed(NL2ScreenB.routeName);
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const NL2ScreenA(),
+                ));
               },
-              child: const Text("GO TO B"),
+              child: const Text("GO TO A"),
             ),
           ],
         ),
