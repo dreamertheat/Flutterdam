@@ -7,4 +7,11 @@ class Styles {
       FontWeight fontWeight = FontWeight.normal}) {
     return TextStyle(color: color, fontSize: fontSize, fontWeight: fontWeight);
   }
+
+  static commonButton(
+      {Color color = Colors.black,
+      double fontSize = 16.0,
+      FontWeight fontWeight = FontWeight.normal}) {
+    return TextStyle(color: color, fontSize: fontSize, fontWeight: fontWeight);
+  }
 }
