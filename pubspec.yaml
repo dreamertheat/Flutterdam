@@ -37,8 +37,14 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   intl: ^0.17.0
-  provider: ^6.0.3
   http: ^0.13.5
+  bloc: ^8.1.0
+  provider: ^6.0.3 #stage management
+  riverpod: ^2.0.2 #stage management
+  scoped_model: ^2.0.0 #stage management
+  auto_route: ^5.0.2 #navigation
+  go_router: ^5.1.1 #navigation
+  after_layout: ^1.2.0
 
 dev_dependencies:
   flutter_test:
@@ -50,7 +56,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-  after_layout: ^1.1.0
+  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
