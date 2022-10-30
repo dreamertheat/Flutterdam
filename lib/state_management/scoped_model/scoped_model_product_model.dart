@@ -26,7 +26,8 @@ class ProductModel extends Model {
 
   void toggleClick() {
     print('toggled! $isClicked');
-    isClicked = true;
+    isClicked = (!isClicked) ? true : false;
+
     notifyListeners();
   }
 }
