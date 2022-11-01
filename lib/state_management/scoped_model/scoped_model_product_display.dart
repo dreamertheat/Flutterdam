@@ -13,17 +13,35 @@ class SMProductDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         padding: const EdgeInsets.all(10),
-        child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: products.length,
-          itemBuilder: ((context, index) {
-            return ScopedModel<ProductModel>(
-              model: products[index],
-              child: SMProductView(
-                pm: products[index],
+        child: Column(
+          children: [
+            Container(
+              height: 100,
+              color: Colors.grey,
+            ),
+            Expanded(
+              child: Container(
+                height: 100,
+                color: Colors.blueGrey,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: products.length,
+                  itemBuilder: ((context, index) {
+                    return ScopedModel<ProductModel>(
+                      model: products[index],
+                      child: SMProductView(
+                        pm: products[index],
+                      ),
+                    );
+                  }),
+                ),
               ),
-            );
-          }),
+            ),
+            Container(
+              height: 100,
+              color: Colors.black,
+            )
+          ],
         ));
   }
 }

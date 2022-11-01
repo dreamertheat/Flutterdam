@@ -15,15 +15,20 @@ class SMProductView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 100,
+      color: color,
       padding: const EdgeInsets.all(1),
       child: TextButton(
         onPressed: () {
           pm.toggleClick();
         },
         child: ScopedModelDescendant<ProductModel>(
-            builder: (context, child, model) => Text(
-                  "${pm.name} is clicked:${pm.isClicked}",
-                  style: Styles.commonText(color: color),
+            builder: (context, child, model) => Container(
+                  decoration: const BoxDecoration(color: Colors.white),
+                  child: Text(
+                    "${pm.name} \nis clicked:${pm.isClicked}",
+                    style: Styles.commonText(color: color),
+                  ),
                 )),
       ),
     );
