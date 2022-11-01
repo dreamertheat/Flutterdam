@@ -14,6 +14,7 @@ class SMProductDisplay extends StatelessWidget {
     return Container(
         padding: const EdgeInsets.all(10),
         child: ListView.builder(
+          scrollDirection: Axis.horizontal,
           itemCount: products.length,
           itemBuilder: ((context, index) {
             return ScopedModel<ProductModel>(

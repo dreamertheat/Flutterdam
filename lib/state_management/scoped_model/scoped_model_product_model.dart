@@ -4,10 +4,12 @@ import 'package:scoped_model/scoped_model.dart';
 
 class ProductModel extends Model {
   final int id;
+  int quantity;
   String name;
   String description;
   bool isClicked;
-  ProductModel(this.id, this.name, this.description, this.isClicked);
+  ProductModel(
+      this.id, this.name, this.description, this.isClicked, this.quantity);
 
   factory ProductModel.fromMap(Map<String, dynamic> json) {
     return ProductModel(
@@ -15,6 +17,7 @@ class ProductModel extends Model {
       json['name'],
       json['description'],
       json['isClicked'],
+      json['quantity'],
     );
   }
 
@@ -22,6 +25,10 @@ class ProductModel extends Model {
     this.name = name;
     this.description = description;
     notifyListeners();
+  }
+
+  void addQuantity() {
+    quantity++;
   }
 
   void toggleClick() {
