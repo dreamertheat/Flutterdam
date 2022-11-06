@@ -4,11 +4,36 @@ class ScopedModelDummyData {
   static List<ProductModel> getMockModels() {
     List<ProductModel> temp = [];
 
-    temp.add(ProductModel(1, "John", "Dough", false, 0));
-    temp.add(ProductModel(2, "Arnold", "Schwarz", false, 0));
-    temp.add(ProductModel(3, "Sylvester", "Stallone", false, 0));
-    temp.add(ProductModel(4, "Al", "Pacino", false, 0));
-    temp.add(ProductModel(5, "Dwayne", "Johnson", false, 0));
+    temp.add(ProductModel(
+        id: 1,
+        name: "John",
+        description: "Dough",
+        isClicked: false,
+        quantity: 0));
+    temp.add(ProductModel(
+        id: 2,
+        name: "Arnold",
+        description: "Schwarz",
+        isClicked: false,
+        quantity: 0));
+    temp.add(ProductModel(
+        id: 3,
+        name: "Sylvester",
+        description: "Stallone",
+        isClicked: false,
+        quantity: 0));
+    temp.add(ProductModel(
+        id: 4,
+        name: "Al",
+        description: "Pacino",
+        isClicked: false,
+        quantity: 0));
+    temp.add(ProductModel(
+        id: 5,
+        name: "Dwayne",
+        description: "Johnson",
+        isClicked: false,
+        quantity: 0));
 
     return temp;
   }

@@ -9,7 +9,7 @@ class ScopeModelStart extends StatelessWidget {
     return MaterialApp(
       title: "State management : Scoped Model",
       home: Scaffold(
-        body: SMProductDisplay(),
+        body: const SMProductDisplay(),
         appBar: AppBar(
           title: const Text("Scope Model"),
         ),

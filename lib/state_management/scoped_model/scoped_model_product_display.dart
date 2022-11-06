@@ -4,10 +4,19 @@ import 'package:flutter_complete_guide/state_management/scoped_model/scoped_mode
 import 'package:flutter_complete_guide/state_management/scoped_model/scoped_model_product_view.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-class SMProductDisplay extends StatelessWidget {
-  SMProductDisplay({super.key});
+import '../../common/constants/styles.dart';
 
-  final List<ProductModel> products = ScopedModelDummyData.getMockModels();
+class SMProductDisplay extends StatefulWidget {
+  const SMProductDisplay({super.key});
+
+  @override
+  State<SMProductDisplay> createState() => _SMProductDisplayState();
+}
+
+class _SMProductDisplayState extends State<SMProductDisplay> {
+  List<ProductModel> products = ScopedModelDummyData.getMockModels();
+
+  ProductModel pm = ProductModel();
 
   @override
   Widget build(BuildContext context) {
@@ -17,29 +26,46 @@ class SMProductDisplay extends StatelessWidget {
           children: [
             Container(
               height: 100,
-              color: Colors.grey,
+              color: Colors.white,
             ),
-            Expanded(
-              child: Container(
-                height: 100,
-                color: Colors.blueGrey,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: products.length,
-                  itemBuilder: ((context, index) {
-                    return ScopedModel<ProductModel>(
-                      model: products[index],
-                      child: SMProductView(
-                        pm: products[index],
-                      ),
-                    );
-                  }),
-                ),
-              ),
+            Wrap(
+              children: products.map((e) {
+                return SizedBox(
+                  width: 100,
+                  height: 100,
+                  child: Card(
+                    child: Column(
+                      children: [
+                        Text(
+                          e.name,
+                          style: Styles.commonButton(fontSize: 11),
+                        ),
+                        Text(
+                          e.description,
+                          style: Styles.commonButton(fontSize: 11),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            e.onClick!();
+                          },
+                          child: Text(
+                            '${e.isClicked}',
+                            style: Styles.commonButton(fontSize: 11),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                );
+              }).toList(),
             ),
             Container(
-              height: 100,
-              color: Colors.black,
+              height: 200,
+              width: 200,
+              color: Colors.white,
+              child: GestureDetector(
+                child: Text("count: ${pm.quantity}"),
+              ),
             )
           ],
         ));

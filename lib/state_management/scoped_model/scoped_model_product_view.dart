@@ -6,9 +6,10 @@ import 'dart:math' as math;
 import '../../common/constants/styles.dart';
 
 class SMProductView extends StatelessWidget {
-  SMProductView({super.key, required this.pm});
+  SMProductView({super.key, required this.pm, required this.index});
 
   final ProductModel pm;
+  final int index;
   final Color color =
       Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
 
@@ -20,7 +21,7 @@ class SMProductView extends StatelessWidget {
       padding: const EdgeInsets.all(1),
       child: TextButton(
         onPressed: () {
-          pm.toggleClick();
+          pm.toggleClick(index);
         },
         child: ScopedModelDescendant<ProductModel>(
             builder: (context, child, model) => Container(

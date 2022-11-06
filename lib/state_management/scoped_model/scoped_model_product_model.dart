@@ -8,16 +8,23 @@ class ProductModel extends Model {
   String name;
   String description;
   bool isClicked;
+  Function? onClick;
+
   ProductModel(
-      this.id, this.name, this.description, this.isClicked, this.quantity);
+      {this.id = 0,
+      this.name = '',
+      this.description = '',
+      this.isClicked = false,
+      this.onClick,
+      this.quantity = 0});
 
   factory ProductModel.fromMap(Map<String, dynamic> json) {
     return ProductModel(
-      json['id'],
-      json['name'],
-      json['description'],
-      json['isClicked'],
-      json['quantity'],
+      id: json['id'],
+      name: json['name'],
+      description: json['description'],
+      isClicked: json['isClicked'],
+      quantity: json['quantity'],
     );
   }
 
@@ -31,8 +38,9 @@ class ProductModel extends Model {
     quantity++;
   }
 
-  void toggleClick() {
-    print('toggled! $isClicked');
+  void toggleClick(int index) {
+    print('toggled! $isClicked $index');
+    if (onClick != null) onClick!(index);
     isClicked = (!isClicked) ? true : false;
 
     notifyListeners();
