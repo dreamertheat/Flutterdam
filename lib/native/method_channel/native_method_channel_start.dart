@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class NativeMethodChannelStart extends StatefulWidget {
   const NativeMethodChannelStart({super.key});
@@ -9,6 +10,23 @@ class NativeMethodChannelStart extends StatefulWidget {
 }
 
 class _NativeMethodChannelStartState extends State<NativeMethodChannelStart> {
+  final platform = const MethodChannel('justSomeMethodChannelD');
+  String batteryLevel = 'error';
+  Future getBatteryLevel() async {
+    final arguments = {'name': 'something'};
+    final String newBatteryLevel =
+        await platform.invokeMethod('getBatteryLevel', arguments);
+    setState(() {
+      batteryLevel = newBatteryLevel;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getBatteryLevel();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,7 +38,10 @@ class _NativeMethodChannelStartState extends State<NativeMethodChannelStart> {
           child: Container(
             padding: const EdgeInsets.all(10),
             child: Column(
-              children: const <Widget>[Text('from Android:'), Text('from iOS')],
+              children: <Widget>[
+                const Text('from Android:'),
+                Text('from iOS $batteryLevel')
+              ],
             ),
           ),
         ),
