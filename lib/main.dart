@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/native/method_channel/native_method_channel_start.dart';
-import 'package:flutter_complete_guide/state_management/scoped_model/scoped_model_start.dart';
 
 void main() {
   runApp(const MyHomePage());

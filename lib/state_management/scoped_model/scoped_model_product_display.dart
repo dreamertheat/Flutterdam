@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/state_management/scoped_model/scoped_model_dummy_data.dart';
 import 'package:flutter_complete_guide/state_management/scoped_model/scoped_model_product_model.dart';
-import 'package:flutter_complete_guide/state_management/scoped_model/scoped_model_product_view.dart';
-import 'package:scoped_model/scoped_model.dart';
 
 import '../../common/constants/styles.dart';
 

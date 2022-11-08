@@ -10,16 +10,15 @@ The goal is to create effective, bite size and concise code snippets for everyon
 
 **Features:**
 
-- Navigation
+Different levels of each category:
 
-- Bloc
+- Navigation (go_route,auto_route, ...)
 
-- FlutterGen
+- State management (bloc, riverpod, provider, scoped model, ...)
 
-- Local database
+- Persistence/Storage (flutter_secure_storage, shared_preferences, sqlite, realm, ...)
 
-- Http
-
+- Network Requests (http, retrofit, chopper, ...)
   
 
 **To use:**
