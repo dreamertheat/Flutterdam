@@ -12,13 +12,15 @@ The goal is to create effective, bite size and concise code snippets for everyon
 
 Different levels of each category:
 
-- Navigation (go_route,auto_route, ...)
+- Navigation (go_router,auto_route, ...)
 
 - State management (bloc, riverpod, provider, scoped model, ...)
 
 - Persistence/Storage (flutter_secure_storage, shared_preferences, sqlite, realm, ...)
 
-- Network Requests (http, retrofit, chopper, ...)
+- Network Requests and monitoring (http, retrofit, chopper, alice ...)
+
+- Extras (native code: method channel)
   
 
 **To use:**
