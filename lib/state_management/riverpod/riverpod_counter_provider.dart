@@ -1,7 +1,5 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-final counterProvider = StateNotifierProvider<RiverpodCounterProvider, int>(
-    (ref) => RiverpodCounterProvider());
 
 final counterStateProvider = StateProvider<int>(
   (ref) {
@@ -9,9 +7,17 @@ final counterStateProvider = StateProvider<int>(
   },
 );
 
-class RiverpodCounterProvider extends StateNotifier<int> {
-  RiverpodCounterProvider() : super(0);
+final secondCounterStateProvider = ChangeNotifierProvider((ref) => Counter());
 
-  void incrementCounter() => state++;
-  void decreaseCounter() => state--;
+class Counter extends ChangeNotifier {
+  int counter = 0;
+  void decreaseCounter() {
+    counter--;
+    notifyListeners();
+  }
+
+  void increaseCounter() {
+    counter++;
+    notifyListeners();
+  }
 }
