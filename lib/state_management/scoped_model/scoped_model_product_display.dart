@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/state_management/scoped_model/scoped_model_dummy_data.dart';
-import 'package:flutter_complete_guide/state_management/scoped_model/scoped_model_product_model.dart';
-
-import '../../common/constants/styles.dart';
+import 'package:flutter_complete_guide/state_management/scoped_model/scoped_model_controller.dart';
+import 'package:scoped_model/scoped_model.dart';
 
 class SMProductDisplay extends StatefulWidget {
   const SMProductDisplay({super.key});
@@ -12,58 +10,55 @@ class SMProductDisplay extends StatefulWidget {
 }
 
 class _SMProductDisplayState extends State<SMProductDisplay> {
-  List<ProductModel> products = ScopedModelDummyData.getMockModels();
-
-  ProductModel pm = ProductModel();
-
   @override
   Widget build(BuildContext context) {
+    return ScopedModelDescendant<ScopedModelController>(
+        builder: (context, child, model) {
+      return content(model);
+    });
+  }
+
+  Widget content(ScopedModelController model) {
     return Container(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: 100,
-              color: Colors.white,
+            const Text('Counter 1:'),
+            const Text('Counter 2:'),
+            const Padding(padding: EdgeInsets.all(16)),
+            const Text('Modify Counter 1'),
+            const Padding(padding: EdgeInsets.all(4)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FloatingActionButton(
+                  child: const Text('+'),
+                  onPressed: () {},
+                ),
+                const Spacer(),
+                FloatingActionButton(
+                  child: const Text('-'),
+                  onPressed: () {},
+                ),
+              ],
             ),
-            Wrap(
-              children: products.map((e) {
-                return SizedBox(
-                  width: 100,
-                  height: 100,
-                  child: Card(
-                    child: Column(
-                      children: [
-                        Text(
-                          e.name,
-                          style: Styles.commonButton(fontSize: 11),
-                        ),
-                        Text(
-                          e.description,
-                          style: Styles.commonButton(fontSize: 11),
-                        ),
-                        TextButton(
-                          onPressed: () {
-                            e.onClick!();
-                          },
-                          child: Text(
-                            '${e.isClicked}',
-                            style: Styles.commonButton(fontSize: 11),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                );
-              }).toList(),
-            ),
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.white,
-              child: GestureDetector(
-                child: Text("count: ${pm.quantity}"),
-              ),
+            const Padding(padding: EdgeInsets.all(16)),
+            const Text('Modify Counter 2'),
+            const Padding(padding: EdgeInsets.all(4)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FloatingActionButton(
+                  child: const Text('+'),
+                  onPressed: () {},
+                ),
+                const Spacer(),
+                FloatingActionButton(
+                  child: const Text('-'),
+                  onPressed: () {},
+                ),
+              ],
             )
           ],
         ));
