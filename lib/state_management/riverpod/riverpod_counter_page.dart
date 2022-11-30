@@ -18,66 +18,76 @@ class RiverpodCounterPage extends ConsumerWidget {
       body: Container(
         margin: const EdgeInsets.all(16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('first counter: $countValue'),
             Text('second counter: ${countValue2.counter}'),
+            const Spacer(),
+            SafeArea(
+              child: Container(
+                margin: const EdgeInsets.all(16),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('Modify Counter#1'),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FloatingActionButton(
+                          child: const Text('+'),
+                          onPressed: () {
+                            ref.read(counterStateProvider.notifier).state++;
+                          },
+                        ),
+                        const Spacer(),
+                        FloatingActionButton(
+                          child: const Text('-'),
+                          onPressed: () {
+                            ref.read(counterStateProvider.notifier).state--;
+                          },
+                        ),
+                      ],
+                    ),
+                    const Padding(padding: EdgeInsets.all(16)),
+                    const Text('Modify Counter#2'),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FloatingActionButton(
+                          child: const Text('+'),
+                          onPressed: () {
+                            ref
+                                .read(secondCounterStateProvider)
+                                .increaseCounter();
+                          },
+                        ),
+                        const Spacer(),
+                        FloatingActionButton(
+                          child: const Text('-'),
+                          onPressed: () {
+                            ref
+                                .read(secondCounterStateProvider)
+                                .decreaseCounter();
+                          },
+                        ),
+                      ],
+                    ),
+                    const Padding(padding: EdgeInsets.all(16)),
+                    TextButton(
+                      child: const Text('Proceed to report'),
+                      onPressed: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) =>
+                              const RiverpodCounterPageReceipt(),
+                        ));
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            )
           ],
-        ),
-      ),
-      floatingActionButton: Center(
-        child: Container(
-          margin: const EdgeInsets.all(16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              const Text('Modify StateProvider'),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  FloatingActionButton(
-                    child: const Text('+'),
-                    onPressed: () {
-                      ref.read(counterStateProvider.notifier).state++;
-                    },
-                  ),
-                  const Spacer(),
-                  FloatingActionButton(
-                    child: const Text('-'),
-                    onPressed: () {
-                      ref.read(counterStateProvider.notifier).state--;
-                    },
-                  ),
-                ],
-              ),
-              const Text('Modify ChangeNotifierProvider'),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  FloatingActionButton(
-                    child: const Text('+'),
-                    onPressed: () {
-                      ref.read(secondCounterStateProvider).increaseCounter();
-                    },
-                  ),
-                  const Spacer(),
-                  FloatingActionButton(
-                    child: const Text('-'),
-                    onPressed: () {
-                      ref.read(secondCounterStateProvider).decreaseCounter();
-                    },
-                  ),
-                ],
-              ),
-              FloatingActionButton(
-                child: const Text('END'),
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const RiverpodCounterPageReceipt(),
-                  ));
-                },
-              ),
-            ],
-          ),
         ),
       ),
     );

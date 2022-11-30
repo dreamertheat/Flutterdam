@@ -13,33 +13,17 @@ class RiverpodCounterPageReceipt extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Riverpod receipt"),
+        title: const Text("Riverpod report"),
       ),
       body: Container(
         margin: const EdgeInsets.all(16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('First Counter: $value'),
             Text('Second Counter: ${value2.counter}'),
           ],
         ),
-      ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          FloatingActionButton(
-            child: const Text('+'),
-            onPressed: () {
-              ref.read(counterStateProvider.notifier).state++;
-            },
-          ),
-          FloatingActionButton(
-            child: const Text('-'),
-            onPressed: () {
-              ref.read(counterStateProvider.notifier).state--;
-            },
-          ),
-        ],
       ),
     );
   }

@@ -11,30 +11,28 @@ class RiverpodStart extends ConsumerWidget {
     return ProviderScope(
       child: MaterialApp(
         home: Builder(
-          builder: (context) => Container(
-            margin: const EdgeInsets.all(16),
-            child: Scaffold(
-              appBar: AppBar(title: const Text('Riverpod')),
-              body: Column(
-                children: [
-                  TextButton(
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute<void>(
-                          builder: (BuildContext context) =>
-                              const RiverpodCounterPage(),
-                        ));
-                      },
-                      child: const Text('Basic counter')),
-                  TextButton(
-                      onPressed: () {
-                        MaterialPageRoute<void>(
-                          builder: (BuildContext context) =>
-                              const RiverpodCounterPage(),
-                        );
-                      },
-                      child: const Text('Card State'))
-                ],
-              ),
+          builder: (context) => Scaffold(
+            appBar: AppBar(title: const Text('Riverpod')),
+            body: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute<void>(
+                        builder: (BuildContext context) =>
+                            const RiverpodCounterPage(),
+                      ));
+                    },
+                    child: const Text('Basic counter')),
+                TextButton(
+                    onPressed: () {
+                      MaterialPageRoute<void>(
+                        builder: (BuildContext context) =>
+                            const RiverpodCounterPage(),
+                      );
+                    },
+                    child: const Text('Card State'))
+              ],
             ),
           ),
         ),
