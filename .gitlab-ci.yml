@@ -1,6 +1,7 @@
 stages:
   - analyze
   - test
+  - ios
 
 analyzer:
   image: bash:5.2.15
