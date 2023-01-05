@@ -1,3 +1,5 @@
+variables:
+  GIT_CLEAN_FLAGS: -fxd
 stages:
   - analyze
   - test
@@ -10,6 +12,7 @@ analyzer:
     - vim --version
     - date
   script:
+    - git clean $GIT_CLEAN_FLAGS
     - time
     - echo "Flutterdam sample script"
     - sleep 35
