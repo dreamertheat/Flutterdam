@@ -3,7 +3,7 @@ variables:
 stages:
   - analyze
   - test
-#  - ios
+  - ios
 
 analyzer:
   stage: analyze
@@ -35,11 +35,11 @@ lolomo:
     - time
   tags:
     - "dev"
-#ios:
-#  stage: ios
-#  script:
-#    - open -a Simulator.app
-#    - fvm flutter run
-#  tags:
-#    - "dev"
+ios:
+  stage: ios
+  script:
+    - open -a Simulator.app
+    - fvm flutter run
+  tags:
+    - "dev"
 
