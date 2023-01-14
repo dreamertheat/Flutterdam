@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/navigation/navigation_level_1/nl1_screen_start.dart';
 
 import 'state_management/bloc/bloc_start.dart';
 
