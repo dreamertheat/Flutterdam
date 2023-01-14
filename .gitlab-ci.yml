@@ -16,8 +16,6 @@ analyzer:
     - time
     - echo "Flutterdam sample script"
     - sleep 35
-    - echo "35 done"
-    - sleep 35
     - echo "sleep done"
     - mkdir gago
     - touch gago/info.txt
