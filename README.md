@@ -4,7 +4,7 @@
 
 **Flutterdam** is a reference code for starters, refreshers and advance Flutter developers.
 
-The goal is to create effective, bite size and concise code snippets for everyone to use.
+The goal is to create effective Flutter skeleton, bite size and concise code snippets for everyone to use.
 
   
 
