@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_complete_guide/state_management/bloc/bloc_view.dart';
 import 'package:flutter_complete_guide/state_management/bloc/blocs/bloc_counter_bloc.dart';
 import 'package:flutter_complete_guide/state_management/bloc/repository/bloc_counter_service.dart';
 
@@ -22,6 +23,7 @@ class _BlocStartState extends State<BlocStart> {
         ],
         child: const MaterialApp(
           title: 'Bloc App',
+          home: BlocView(),
         ));
   }
 }
