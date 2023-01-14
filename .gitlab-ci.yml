@@ -8,15 +8,16 @@ stages:
 analyzer:
   stage: analyze
   before_script:
+    - fvm use 3.3.2
     - pwd
     - vim --version
     - date
   script:
     - git clean $GIT_CLEAN_FLAGS
     - time
-    - echo "Flutterdam sample script"
-    - sleep 35
-    - echo "sleep done"
+    - echo "Analyzing something here..."
+    - sleep 10
+    - echo "Analyzing done!"
     - mkdir gago
     - touch gago/info.txt
   artifacts:
