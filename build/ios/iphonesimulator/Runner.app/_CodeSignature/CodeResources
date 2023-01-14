@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		rdNgCk2jHQsLxRpgEOftMV4JofY=
+		voWUtoxsnXk7QtSpo4L4yavrK+U=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		AAiNp/udUaVzHjwJoeJ4lA2xxZk=
+		3ZF8BKXMLHi4C2K7tp/mocFjCN0=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		3+D/7nBwvQT24DPC3BSNhPBMe5g=
+		eHJ63W2DFEAQNOKIp3g6JijCMUs=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -334,7 +334,7 @@
 		</data>
 		<key>Frameworks/sqflite.framework/sqflite</key>
 		<data>
-		5UcnUSlRvdgHSmox6kDKHAf6OoA=
+		ZzcaNBV4hOMfUM5L/PH05Z9OfU0=
 		</data>
 		<key>Frameworks/url_launcher_ios.framework/Info.plist</key>
 		<data>
@@ -350,7 +350,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		SqIzQik7/85t6NdATYZbfJV4AbI=
+		qzw8MmSyXv9ALfodcXjVCQn2Axg=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -433,7 +433,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BXvyL94DlGRDCVX4JVDoe24OYGDlP/sJ/CaHk791vqs=
+			7V40T6qroBCKC5Axl6bj9YoFEKm9JGRezFjRzu4RkOU=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -447,7 +447,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			coprs4j0lw5H2PC8DmEyw/+Dbg0Z5mr3Y4JHsK/SauM=
+			9czthYYRZ12HjmGseyIJLUfK8qlcx1A1TcPZTaaepbM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
@@ -517,7 +517,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			21r4Vyk24vb6XZEwViBoq9WqJKiOzMB0vv+mBILgt8g=
+			E8rk0yk2lFt5HWkkiJeCYlFflcdegVR9g63A8zgabI8=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -937,7 +937,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ch2OHTXW73GYN9n7xnkc9Ny5TLIKMrVF5Go0g2D1d8g=
+			aj+BU704Pvx6YJGamQVuq5xYPEXFwI2SW7EKhHu4MTM=
 			</data>
 		</dict>
 		<key>Frameworks/url_launcher_ios.framework/Info.plist</key>

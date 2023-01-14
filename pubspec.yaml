@@ -52,6 +52,8 @@ dependencies:
   retrofit: ^3.3.1 #network
   alice: ^0.3.0 #network
   chopper: ^5.1.0 #network
+  flutter_bloc: ^8.1.1 #state management
+  equatable: ^2.0.5 #for comparing dart objects
 
 dev_dependencies:
   flutter_test:
