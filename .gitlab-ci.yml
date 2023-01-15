@@ -49,10 +49,11 @@ ios:
 reports:
   stage: reports
   script:
-    - screencapture scr.jpg
+    - mkdir reports
+    - screencapture reports/scr.jpg
   artifacts:
     untracked: false
     expire_in: 2 days
     paths:
-      - scr.jpg
+      - reports/scr.jpg
 
