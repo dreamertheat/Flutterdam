@@ -5,7 +5,6 @@ import 'package:flutter_complete_guide/state_management/bloc/blocs/bloc_counter_
 import 'package:flutter_complete_guide/state_management/bloc/blocs/bloc_counter_state.dart';
 
 import 'blocs/bloc_counter_event.dart';
-import 'blocs/bloc_master_state.dart';
 
 class BlocView extends StatefulWidget {
   const BlocView({super.key});
