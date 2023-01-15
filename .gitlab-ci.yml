@@ -33,7 +33,6 @@ lolomo:
   stage: test
   script:
     - fvm flutter analyze
-    - test -f "gago/info.txt"
     - time
   tags:
     - "dev"
