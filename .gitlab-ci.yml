@@ -4,10 +4,12 @@ stages:
   - analyze
   - test
   - ios
+  - reports
 
 analyzer:
   stage: analyze
   before_script:
+    - screencapture buildmachine.jpg
     - fvm use 3.3.2
     - pwd
     - vim --version
@@ -41,5 +43,14 @@ ios:
     - open -a Simulator.app
     - fvm flutter run
   tags:
-    - "dev"
+    - "devx"
+reports:
+  stage: reports
+  script:
+    - screencapture scr.jpg
+  artifacts:
+    untracked: false
+    expire_in: 2 days
+    paths:
+      - scr.jpg
 
