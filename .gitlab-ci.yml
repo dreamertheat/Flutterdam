@@ -55,4 +55,6 @@ reports:
     expire_in: 2 days
     paths:
       - reports/$_now.jpg
+  tags:
+    - "dev"
 
