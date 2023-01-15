@@ -9,8 +9,6 @@ stages:
 analyzer:
   stage: analyze
   before_script:
-    - mkdir gago
-    - screencapture gago/buildmachine.jpg
     - fvm use 3.3.2
     - pwd
     - vim --version
@@ -21,6 +19,8 @@ analyzer:
     - echo "Analyzing something here..."
     - sleep 10
     - echo "Analyzing done!"
+    - mkdir gago
+    - screencapture gago/buildmachine.jpg
     - touch gago/info.txt
   artifacts:
     untracked: false
