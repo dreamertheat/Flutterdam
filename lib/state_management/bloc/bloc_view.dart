@@ -42,6 +42,7 @@ class _BlocViewState extends State<BlocView> {
 
   Widget body() {
     return MultiBlocListener(
+      //not really necessary but dev can use this multibloc listener to handle multiple listeners if needed
       listeners: <BlocListener<dynamic, dynamic>>[
         BlocListener<BlocCounterBloc, BlocCounterState>(
           listener: (BuildContext context, BlocCounterState state) {
