@@ -20,13 +20,14 @@ analyzer:
     - sleep 10
     - echo "Analyzing done!"
     - mkdir analyzer
-    - /usr/sbin/screencapture -x analyzer/$_now.jpg
+    - /usr/sbin/screencapture -x analyzer/analyzer.jpg
     - touch analyzer/info.txt
+    - echo "written by analyzer" >> analyzer/info.txt
   artifacts:
     untracked: false
     expire_in: 1 days
     paths:
-      - gago/
+      - analyzer/
   tags:
     - "dev"
 lolomo:
@@ -49,12 +50,12 @@ reports:
   stage: reports
   script:
     - mkdir reports
-    - /usr/sbin/screencapture -x reports/$_now.jpg
+    - /usr/sbin/screencapture -x reports/report.jpg
   artifacts:
     untracked: false
     expire_in: 2 days
     paths:
-      - reports/$_now.jpg
+      - reports/report.jpg
   tags:
     - "dev"
 
