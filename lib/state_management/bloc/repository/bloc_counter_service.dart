@@ -10,7 +10,7 @@ class BlocCounterService implements BlocCounterRepository {
   Future<String> putCounter(String counter) async {
     int? value = int.tryParse(counter);
 
-    if (value != null) {
+    if (value == null) {
       return 'error';
     } else {
       return counter;

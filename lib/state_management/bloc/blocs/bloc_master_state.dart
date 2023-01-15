@@ -1,7 +1,7 @@
 import 'bloc_counter_state.dart';
 
-abstract class MasterState implements BlocCounterState {
-  const MasterState();
+abstract class BlocMasterState implements BlocCounterState {
+  const BlocMasterState();
 
   @override
   List<Object> get props => <Object>[];
@@ -11,6 +11,6 @@ abstract class MasterState implements BlocCounterState {
 }
 
 /// State where screen is initialized
-class InitialState extends MasterState {
+class InitialState extends BlocMasterState {
   const InitialState();
 }
