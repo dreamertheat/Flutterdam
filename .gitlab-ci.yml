@@ -43,7 +43,9 @@ ios:
     - open -a Simulator.app
     - fvm flutter run
   tags:
-    - "devx"
+    - "dev"
+  only:
+    - "automation"
 reports:
   stage: reports
   script:
