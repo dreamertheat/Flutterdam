@@ -19,9 +19,9 @@ analyzer:
     - echo "Analyzing something here..."
     - sleep 10
     - echo "Analyzing done!"
-    - mkdir gago
-    - screencapture gago/buildmachine.jpg
-    - touch gago/info.txt
+    - mkdir analyzer
+    - /usr/sbin/screencapture -x analyzer/$_now.jpg
+    - touch analyzer/info.txt
   artifacts:
     untracked: false
     expire_in: 1 days
@@ -50,10 +50,10 @@ reports:
   stage: reports
   script:
     - mkdir reports
-    - screencapture reports/scr.jpg
+    - /usr/sbin/screencapture -x reports/$_now.jpg
   artifacts:
     untracked: false
     expire_in: 2 days
     paths:
-      - reports/scr.jpg
+      - reports/$_now.jpg
 
