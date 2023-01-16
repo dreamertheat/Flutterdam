@@ -28,3 +28,5 @@ Different levels of each category:
 - Every folder is a feature which contains feature_start.dart (example: nl1_screen_start.dart)
 
 - Open **main.dart**, and replace line 15 with your desired start class
+
+This repo is mirrored to https://github.com/dreamertheat/Flutterdam
